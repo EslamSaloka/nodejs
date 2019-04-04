@@ -1,0 +1,29 @@
+<h1 class="mt-4">Chat</h1>
+<p class="lead mb-3">Welcome <%= user.name %></p>
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
+<br/>
+<br/>
+<br/>
+<div class="row">
+    <!-- inicio de la caja de chat con bootstrap -->
+    <div class="col-md-12" style="border: 1px solid #0000001c;">
+        <div class="panel panel-primary">
+            <div class="panel-body" style=" max-height: 500px; min-height: 500px; overflow: hidden;overflow-y: scroll;">
+                <ul class="chat" id="output"> 
+                </ul>
+            </div>
+            <div class="panel-footer">
+                <div class="input-group">
+                    <input id="Mensaje" type="text" class="form-control input-sm" placeholder="Escribe un mensaje..." />
+                    <input type="hidden" id="username" value="<%= user.name %>">
+                    <span class="input-group-btn">
+                        <button class="btn btn-warning btn-sm" id="btnEnviar" style="width: 55px;height: 37px;">
+                            Send
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  Fin de la caja de chat con bootstrap -->
+</div>
